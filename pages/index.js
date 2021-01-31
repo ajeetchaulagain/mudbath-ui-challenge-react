@@ -1,10 +1,15 @@
 import React from "react";
+import MasterLayout from "../src/components/MasterLayout";
 
 const IndexPage = () => {
   return (
-    <div className="bg-blue-500 text-white px-10 py-10">
-      <h1>Welcome to Mudbath!</h1>
-    </div>
+    <MasterLayout>
+      <div className="content-wrapper">
+        <div className="lg:container mx-auto py-20">
+          <h1>Welcome to XYZ Shopping</h1>
+        </div>
+      </div>
+    </MasterLayout>
   );
 };
 
