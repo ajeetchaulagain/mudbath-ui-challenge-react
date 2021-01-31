@@ -1,0 +1,28 @@
+{
+  "name": "mudbath-ui-challenge-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajeetchaulagain/mudbath-ui-challenge-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajeetchaulagain/mudbath-ui-challenge-react/issues"
+  },
+  "homepage": "https://github.com/ajeetchaulagain/mudbath-ui-challenge-react#readme",
+  "dependencies": {
+    "next": "^10.0.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
