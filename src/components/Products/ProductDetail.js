@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const ProductDetail = ({ product }) => {
   const { name, description, price } = product;
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row -mx-2">
       <div className="lg:w-1/4 image-holder  h-64 p-4">
         <div className="image-section bg-gray-200 rounded p-4 -mx-2 mb-2 h-32 flex flex-col justify-center items-center">
           <h2 className="text-3xl font-black text-gray-500">{name}</h2>

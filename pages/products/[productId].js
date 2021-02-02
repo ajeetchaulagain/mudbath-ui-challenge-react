@@ -3,10 +3,11 @@ import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import MasterLayout from "../../src/components/MasterLayout";
 import ProductDetail from "../../src/components/Products/ProductDetail";
+import Spinner from "../../src/components/shared/Spinner";
+import BackButton from "../../src/components/shared/BackButton";
 
 const ProductDetailPage = ({ products, error, isFetching }) => {
   const router = useRouter();
-  console.log("products:ProductDetailpage", products);
   const { productId } = router.query;
 
   const product = products.find(
@@ -16,10 +17,17 @@ const ProductDetailPage = ({ products, error, isFetching }) => {
   return (
     <MasterLayout>
       <div className="lg:container mx-auto py-10">
-        <h1 className="text-gray-900 font-bold text-2xl mb-6">
-          Product Detail
-        </h1>
-        {product && <ProductDetail product={product} />}
+        {isFetching ? (
+          <Spinner />
+        ) : (
+          <>
+            <h1 className="text-gray-900 font-bold text-2xl mb-6">
+              Product Detail
+            </h1>
+            {product && <ProductDetail product={product} />}
+            <BackButton />
+          </>
+        )}
       </div>
     </MasterLayout>
   );
