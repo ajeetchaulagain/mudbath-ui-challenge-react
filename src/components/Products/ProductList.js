@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ProductInfo from "./ProductInfo";
 
 const ProductList = ({ products }) => {
   return (
-    <div>
+    <div className="flex flex-wrap align-items justify-start lg:container lg:mx-auto">
       {products.map((product) => (
-        <h2 key={product.id}>{product.name}</h2>
+        <ProductInfo product={product} />
       ))}
     </div>
   );
