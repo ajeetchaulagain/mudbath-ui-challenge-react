@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import MasterLayout from "../../src/components/MasterLayout";
 import ProductDetail from "../../src/components/Products/ProductDetail";
 import Spinner from "../../src/components/shared/Spinner";
+import BackButton from "../../src/components/shared/BackButton";
 
 const ProductDetailPage = ({ products, error, isFetching }) => {
   const router = useRouter();
@@ -24,6 +25,7 @@ const ProductDetailPage = ({ products, error, isFetching }) => {
               Product Detail
             </h1>
             {product && <ProductDetail product={product} />}
+            <BackButton />
           </>
         )}
       </div>
