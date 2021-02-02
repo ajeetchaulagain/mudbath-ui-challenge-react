@@ -12,7 +12,7 @@ const ProductListingPage = ({ products, error, isFetching }) => {
           <Spinner />
         ) : (
           <>
-            <h1 className="text-gray-900 font-bold text-2xl mb-6">
+            <h1 className="text-gray-900 font-bold text-2xl mb-6 ml-2">
               List of Products
             </h1>
             <ProductList products={products} />
