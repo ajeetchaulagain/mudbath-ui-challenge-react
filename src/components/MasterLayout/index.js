@@ -14,7 +14,7 @@ const MasterLayout = ({ children }) => {
 };
 
 MasterLayout.propTypes = {
-  children: PropTypes.elementType,
+  children: PropTypes.element,
 };
 
 export default MasterLayout;
