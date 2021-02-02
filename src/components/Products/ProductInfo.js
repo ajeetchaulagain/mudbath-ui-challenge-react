@@ -16,7 +16,7 @@ const ProductInfo = ({ product }) => {
   };
 
   const selectedAmount = priceList.find(
-    (currency) => currency.base === selectedCurrencyBase
+    (price) => price.base === selectedCurrencyBase
   ).amount;
 
   return (
