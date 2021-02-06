@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import MasterLayout from "../../src/components/MasterLayout";
 import ProductList from "../../src/components/Products/ProductList";
 import Spinner from "../../src/components/shared/Spinner";
+import {
+  ProductDataProvider,
+  ProductDataContext,
+} from "../../src/context/ProductContext";
 
-const ProductListingPage = ({ products, error, isFetching }) => {
+const ProductListingPage = () => {
+  const { products, isFetching } = useContext(ProductDataContext);
   return (
     <MasterLayout>
       <div className="lg:container mx-auto py-20">
@@ -21,12 +26,6 @@ const ProductListingPage = ({ products, error, isFetching }) => {
       </div>
     </MasterLayout>
   );
-};
-
-ProductListingPage.propTypes = {
-  products: PropTypes.array.isRequired,
-  error: PropTypes.object,
-  isFetching: PropTypes.bool.isRequired,
 };
 
 export default ProductListingPage;

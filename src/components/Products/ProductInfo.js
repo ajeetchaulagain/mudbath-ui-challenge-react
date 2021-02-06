@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import getPriceListBasedOnCurrency from "../../util/getPriceList";
+import { ProductDataContext } from "../../context/ProductContext";
 
 const ProductInfo = ({ product }) => {
   const { base, amount } = product.price;
+
+  const { selectedCurrencyBase, setSelectedCurrencyBase } = useContext(
+    ProductDataContext
+  );
   //USD is assumed to be a default base.
-  const [selectedCurrencyBase, setSelectedCurrencyBase] = useState("USD");
+  // const [selectedCurrencyBase, setSelectedCurrencyBase] = useState("USD");
   const router = useRouter();
 
   const priceList = getPriceListBasedOnCurrency(base, amount);

@@ -1,8 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useContext } from "react";
 import ProductInfo from "./ProductInfo";
+import { ProductDataContext } from "../../context/ProductContext";
 
-const ProductList = ({ products }) => {
+const ProductList = () => {
+  const { products } = useContext(ProductDataContext);
   return (
     <div className="flex flex-wrap align-items justify-start lg:container lg:mx-auto">
       {products.map((product) => (
@@ -10,10 +11,6 @@ const ProductList = ({ products }) => {
       ))}
     </div>
   );
-};
-
-ProductList.propTypes = {
-  products: PropTypes.array.isRequired,
 };
 
 export default ProductList;

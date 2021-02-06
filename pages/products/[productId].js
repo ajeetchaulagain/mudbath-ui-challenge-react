@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useRouter } from "next/router";
-import PropTypes from "prop-types";
 import MasterLayout from "../../src/components/MasterLayout";
 import ProductDetail from "../../src/components/Products/ProductDetail";
 import Spinner from "../../src/components/shared/Spinner";
 import BackButton from "../../src/components/shared/BackButton";
+import { ProductDataContext } from "../../src/context/ProductContext";
 
-const ProductDetailPage = ({ products, error, isFetching }) => {
+const ProductDetailPage = () => {
   const router = useRouter();
   const { productId } = router.query;
+  const { products, isFetching } = useContext(ProductDataContext);
 
   const product = products.find(
     (product) => product.id === parseInt(productId)
@@ -31,12 +32,6 @@ const ProductDetailPage = ({ products, error, isFetching }) => {
       </div>
     </MasterLayout>
   );
-};
-
-ProductDetailPage.propTypes = {
-  products: PropTypes.array.isRequired,
-  error: PropTypes.object,
-  isFetching: PropTypes.bool.isRequired,
 };
 
 export default ProductDetailPage;
