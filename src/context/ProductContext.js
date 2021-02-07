@@ -8,7 +8,6 @@ const ProductDataProvider = ({ children }) => {
   const [isFetching, setIsFetching] = useState(false);
 
   //USD is assumed to be a default base.
-  const [selectedCurrencyBase, setSelectedCurrencyBase] = useState("USD");
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -29,8 +28,6 @@ const ProductDataProvider = ({ children }) => {
     products,
     error,
     isFetching,
-    selectedCurrencyBase,
-    setSelectedCurrencyBase,
   };
   return (
     <ProductDataContext.Provider value={stateValue}>

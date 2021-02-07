@@ -7,11 +7,9 @@ import { ProductDataContext } from "../../context/ProductContext";
 const ProductInfo = ({ product }) => {
   const { base, amount } = product.price;
 
-  const { selectedCurrencyBase, setSelectedCurrencyBase } = useContext(
-    ProductDataContext
-  );
   //USD is assumed to be a default base.
-  // const [selectedCurrencyBase, setSelectedCurrencyBase] = useState("USD");
+  const [selectedCurrencyBase, setSelectedCurrencyBase] = useState("USD");
+
   const router = useRouter();
 
   const priceList = getPriceListBasedOnCurrency(base, amount);
