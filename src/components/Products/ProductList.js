@@ -7,7 +7,7 @@ const ProductList = () => {
   return (
     <div className="flex flex-wrap align-items justify-start lg:container lg:mx-auto">
       {products.map((product) => (
-        <ProductInfo product={product} />
+        <ProductInfo product={product} key={product.id} />
       ))}
     </div>
   );
