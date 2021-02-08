@@ -1,12 +1,8 @@
 import React, { useContext } from "react";
-import PropTypes from "prop-types";
 import MasterLayout from "../../src/components/MasterLayout";
 import ProductList from "../../src/components/Products/ProductList";
 import Spinner from "../../src/components/shared/Spinner";
-import {
-  ProductDataProvider,
-  ProductDataContext,
-} from "../../src/context/ProductContext";
+import { ProductDataContext } from "../../src/context/ProductContext";
 
 const ProductListingPage = () => {
   const { products, isFetching } = useContext(ProductDataContext);

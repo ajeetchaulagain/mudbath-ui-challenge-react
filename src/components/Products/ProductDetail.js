@@ -5,6 +5,7 @@ import CurrencySelect from "../shared/CurrencySelect";
 
 const ProductDetail = ({ product }) => {
   const { name, description, price } = product;
+
   //USD is assumed to be a default base.
   const [selectedCurrencyBase, setSelectedCurrencyBase] = useState("USD");
   const { base, amount } = product.price;
