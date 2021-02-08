@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import getPriceListBasedOnCurrency from "../../util/getPriceList";
 import { ProductDataContext } from "../../context/ProductContext";
+import CurrencySelect from "../shared/CurrencySelect";
 
 const ProductInfo = ({ product }) => {
   const { base, amount } = product.price;
@@ -32,19 +33,10 @@ const ProductInfo = ({ product }) => {
         <h3 className="mb-4">
           <span className="font-bold">Price: </span>
           {selectedAmount}
-          <select
-            data-testid="currency-select"
-            onChange={onCurrencyChange}
-            className="border ml-3 rounded border-purple-500"
-          >
-            {priceList.map((price) => {
-              return (
-                <option key={price.base} value={price.base}>
-                  {price.base}
-                </option>
-              );
-            })}
-          </select>
+          <CurrencySelect
+            onCurrencyChange={onCurrencyChange}
+            priceList={priceList}
+          />
         </h3>
         <button
           onClick={() => router.push(`/products/${product.id}`)}
