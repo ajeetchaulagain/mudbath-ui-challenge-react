@@ -33,6 +33,7 @@ const ProductInfo = ({ product }) => {
           <span className="font-bold">Price: </span>
           {selectedAmount}
           <select
+            data-testid="currency-select"
             onChange={onCurrencyChange}
             className="border ml-3 rounded border-purple-500"
           >
