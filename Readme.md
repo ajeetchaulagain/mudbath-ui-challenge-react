@@ -33,10 +33,10 @@ Current code coverage is 67%
 
 ## If need to extend the project
 
-This is a coding challenge and scope was quite small. If it was going to be a project which is likely to get extendable in future, doing the following woule be better:
+This is a coding challenge and scope was quite small. If it was going to be a project which is likely to get extendable in future, doing the following would be better:
 
 1. More focus on refactoring the solution to make code less polluted. Using react hooks like useReducer and extracting state logic into custom hooks.
-2. Creating reusable hooks combined with useReducer to fetch all API calls based on change in api endpoing url.
+2. Creating reusable hooks combined with useReducer to fetch all API calls based on change in api endpoint url.
 3. Extracting state logic for CurrencySelect input in custom hooks.
 4. More Integration testing with simulation of real API calls.
 5. Integrate the feature as listed in bonus requirement.
