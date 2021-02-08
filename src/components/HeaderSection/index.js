@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 const HeaderSection = () => {
   return (
@@ -10,7 +9,5 @@ const HeaderSection = () => {
     </div>
   );
 };
-
-HeaderSection.propTypes = {};
 
 export default HeaderSection;
