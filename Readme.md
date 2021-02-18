@@ -33,7 +33,7 @@ Current code coverage is 67%
 
 ## If need to extend the project
 
-This is a coding challenge and scope was quite small. If it was going to be a project which is likely to get extendable in future, doing the following would be better:
+This is a coding challenge and scope was quite small. If it was going to be a project which is likely to get extended in near future, doing the following would be better:
 
 1. More focus on refactoring the solution to make code less polluted. Using react hooks like useReducer and extracting state logic into custom hooks.
 2. Creating reusable hooks combined with useReducer to fetch all API calls based on change in api endpoint url.
